@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"> </script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="D-Day.css">
 </head>
 
 <body class="font-zelda">
     <header class="z-[60] sticky top-0">
         <nav class="relative z-[60] flex items-center justify-between
-         backdrop-filter backdrop-blur-md bg-opacity-40 px-[90px] h-[90px]">
-            <div class="flex flex-row items-center gap-[60px]">
-                <img class="h-14 w-auto" src="./images/Navbar/navbar-logo.svg" alt="Home">
+        backdrop-filter backdrop-blur-md bg-opacity-40 sm:px-6 md:px-[16px] lg:px-[90px] h-[90px]">
+            <div class="flex flex-row items-center gap-[16px]">
+                <img class="sm:h-12 lg:h-14 w-auto" src="images/Navbar/navbar-logo.svg" alt="Home">
 
-                <ul class="flex flex-row gap-[64px] text-white text-[2rem]">
+                <ul class="hidden lg:flex flex-row gap-[64px] text-white text-[2rem]">
                     <a class="hover:underline hover:text-[#F3B641]" href="#hero">
                         Home</a>
                     <a class="hover:underline hover:text-[#F3B641]" href="#aboutme">
@@ -28,53 +28,112 @@
                 </ul>
             </div>
 
+            <!-- ini bagian ikon -->
             <div class="flex flex-row items-center gap-3">
-                <div class="flex flex-row items-center gap-[15px]">
+                <div class="hidden lg:flex lg:flex-row items-center gap-[15px]">
                     <a href="https://x.com/HMSI_ITS" class="transition duration-200 
                     ease-in-out hover:grayscale hover:opacity-70" target="_blank">
-                        <img class="w-11" src="../images/Navbar/x-logo.svg" alt="X">
+                        <img class="w-11" src="images/Navbar/x-logo.svg" alt="X">
                     </a>
 
-                    <a href="https://www.tiktok.com/ayuunn_yunn" class="transition duration-200 
+                    <a href="https://x.com/HMSI_ITS" class="transition duration-200 
                     ease-in-out hover:grayscale hover:opacity-70" target="_blank">
-                        <img class="w-11" src="../images/Navbar/tiktok-logo.svg" alt="tiktok">
+                        <img class="w-11" src="images/Navbar/tiktok-logo.svg" alt="tiktok">
                     </a>
 
-                    <a href="https://www.instagram.com/ayunnmm_" class="transition duration-200 
+                    <a href="https://x.com/HMSI_ITS" class="transition duration-200 
                     ease-in-out hover:grayscale hover:opacity-70" target="_blank">
-                        <img class="w-11" src="../images/Navbar/ig-logo.svg" alt="instagram">
+                        <img class="w-11" src="images/Navbar/ig-logo.svg" alt="instagram">
                     </a>
-                    <a href="https://www.youtube.com/@ayunn_ayn" class="transition duration-200 
+                    <a href="https://x.com/HMSI_ITS" class="transition duration-200 
                     ease-in-out hover:grayscale hover:opacity-70" target="_blank">
-                        <img class="w-11" src="../images/Navbar/yt-logo.svg" alt="youtube">
+                        <img class="w-11" src="images/Navbar/yt-logo.svg" alt="youtube">
                     </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuButton"
+                    class="flex lg:hidden item-center justify-center w-[48px] h-[48px] bg-[#4C1C0E] rounded-lg z-[60]">
+                    <img id="menuIcon" src="/images/Navbar/menu.svg" alt="Menu" class="h-[38.97px] w-[38.97px]">
+                    <img id="exitIcon" src="/images/Navbar/exit.svg" alt="Menu" class="h-[38.97px] w-[38.97px] hidden">
+                </button>
             </div>
         </nav>
+        
+        <!-- screen sidebar -->
+        <div id="mobileMenu"
+            class="lg:hidden backdrop-filter backdrop-blur-md bg-opacity-40
+            fixed inset-0  z-[50] transition-transform duration-300 ease-in-out">
+
+            <div class="h-[90px]"></div>
+            <ul class="flex flex-col items-center text-center py-6 text-white text-[2rem]">
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F38641]" href="#hero">Home</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F38641]" href="#aboutme">About Me</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F38641]" href="#myskills">My Skills</a>
+                </li>
+                <li class="w-full py-4">
+                    <a class="hover:underline hover:text-[#F38641]" href="#Experience">Experience</a>
+                </li>
+            </ul>
+
+        </div>
+        <script src="script.js"></script>
     </header>
-    <main class="bg-black text-white">
+
+    <main class=" text-white">
+
+        <!-- Background Overlay (dikontrol via bgScrollEffect.js) -->
+        <div id="bg-overlay" class="fixed inset-0 -z-10 bg-black opacity-0 pointer-events-none"></div>
+
+        <!-- background image sesuai tema (Fix Penulisan Path Tailwind) -->
+        <div class="fixed inset-0 -z-20 bg-cover bg-center bg-[url(./images/Hero/VENTURA_EMPIRE.png)]"></div>
+        
         <!-- Section 1 - Hero -->
-        <section id="hero" class="bg-[red] text-center py-[100px]">
-            <h1 class="font-zelda text-center text-[112px]">My Portfolio</h1>
-            <p class="px-[100px] text-[32px]">Pambayun ardhanareswari artantyadi</p>
-        </section>
+        <section id="hero" class="w-full flex flex-col pt-[166px] md:pt-[270.5px] justify-center items-center gap-4">
+            <h1 class="uppercase text-[4rem] md:text-[6rem] lg:text-[8rem] text-white text-center leading-none" 
+                style="-webkit-text-stroke:2px #7A3D21; text-shadow:0 5px 0 #7A3D21">My Portfolio
+            </h1>
+        </div class="flex w-full min-w-[338px] lg:w-[391px]aspect-[341/143] items-center justify-center bg-[url('images/hero/paper-hero-mobile.svg')]
+        lg:bg-[url('images/hero/paper-hero-desktop.svg')] bg-center bg-no-repeat pb-1.5">
+            <p class="px-[#7A3D21] text-[1.7rem] md:text-[2rem] font-bold">pambayun ardhanareswari artantyadi
+            </p><div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90">
+<a href="#aboutme" class="px-[51px] py-[4px] md:px-[119.5px] md:py-[8px] bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)] rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px] drop-shadow-[0_8px_0_#592918]">
+    <p class="uppercase text-white text-[1.3rem] md:text-[1.75rem] md:leading-none">EXPLORE MORE</p>
+</a>
+</div>
 
+        </div>
+        <div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90">
+            <a href="#aboutme" class="px-[51px] py-[4px] md:py-[8px] border border-[#E3B641] ouline outline-1 drop-shadow-[0_8px_0_#592918]">
+            </p></a>
+            </p>
+        </a>
+        </div>
         <!-- Section 2 - About me -->
-        <section id="aboutme" class="w-full">
+        <section id="aboutme" class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-24 px-6 md:px-16 lg:px-[90px] mt-100 lg:mt-60">
+            <div class="order-1 lg:order-2 shrink-0">
+        <div class="relative w-[240px] md:w-[280px] lg:w-[340px] aspect-[700/1040]">
+    <img src="images/about/card.png" alt="Kartu profil" class="absolute inset-0 w-full h-full z-10 pointer-events-none" />
+    </div>
+</div>
             <h2 class="font-zelda text-center text-[80px]">About Me</h2>
-            <p class="px-[100px] text-center text-[32px]">hayyie semua aku ayun, aku dari SMKN 1 SURABAYA, aku sukaa bikin pastry.</p>
-
+            <p class="px-[100px] text-center text-[32px]">Halo semua aku ayun, aku dari SMKN1 dari jurusan rpl, aku suka memasak.</p>
         </section>
 
         <!-- Section 3 - My Skills -->
-        <section id="myskills" class="text-left w-full mx-auto p-[60px] w-full">
+        <section id="myskills" class="text-left mx-auto p-[60px] w-full">
             <h2 class="font-zelda text-center text-[80px]">My Skills</h2>
             <div>
-                <h3 class="font-zelda text-[48px]">Aku tertarik dengan mata kuliah yang ada di sisfor</h3>
-                <ul class="text-[32px] list-inside list-disc">
-                    <li>Matematika</li>
-                    <li>Fisika</li>
-                    <li>Kimia</li>
+                <h3 class="font-zelda text-[48px] text-center">Aku tertarik dengan mata pelajaran seni dan pjok</h3>
+                <ul class="text-[32px] list-inside list-disc text-center">
+                    <li>pjok</li>
+                    <li>seni</li>
+                    <li>pipas</li>
                 </ul>
             </div>
         </section>
@@ -82,27 +141,29 @@
         <!-- Section 4 -  My Experience -->
         <section id="Experience" class="py-[100px]">
             <div>
-                <h2 class="font-zelda text-[112px] text-white text-shadow-[0_5px_0_#7A3D21] text-center">My Experience
-                </h2>
-
-                <img src="images/fotoku/foto1.png" alt="Deskripsi foto 1">
-                <img src="images/fotoku/foto2.png" alt="Deskripsi foto 2">
-                <img src="images/fotoku/foto3.png" alt="Deskripsi foto 3">
-                <img src="images/fotoku/foto4.png" alt="Deskripsi foto 4">
+                <h2 class="font-zelda text-[112px] text-white text-shadow-[0_5px_0_#7A3D21] text-center">My Experience</h2>
+                <img src="/images/fotoku/foto1.png" alt="Deskripsi foto 1">
+                <img src="/images/fotoku/foto2.png" alt="Deskripsi foto 2">
+                <img src="/images/fotoku/foto3.png" alt="Deskripsi foto 3">
+                <img src="/images/fotoku/foto4.png" alt="Deskripsi foto 4">
             </div>
         </section>
+        
+        <!-- Penambahan ekstensi .js -->
+        <script src="./bgScrollEffect.js"></script>
     </main>
 
     <!-- Footer -->
     <footer class="w-full sm:h-[500px] md:h-[350px] lg:h-[600px] 
-        bg-[url('/images/footer/bg-footer.png')] bg-cover bg-center px-4 py-8 lg:px-[90px] 
+        bg-[url(./images/footer/bg-footer.png)] bg-cover bg-center px-4 py-8 lg:px-[90px] 
         lg:py-[88px] lg:border-t-[20px] lg:border-t-[#7A3D21] flex justify-center items-center">
 
         <!-- FRAME Parent -->
         <div class="flex flex-col sm:w-full h-[440px] md:w-170 lg:w-full md:h-full 
-            bg-[url('/images/footer/frame-footer-mobile.png')]
-            md:bg-[url('/images/footer/frame-footer-desktop.png')] 
+            bg-[url(./images/footer/frame-footer-mobile.png)]
+            md:bg-[url(./images/footer/frame-footer-desktop.png)] 
             bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] items-center justify-center">
+            
             <!-- NAVBAR -->
             <div class="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-6">
                 <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#hero">HOME</a>

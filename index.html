@@ -91,7 +91,7 @@
         <div id="bg-overlay" class="fixed inset-0 -z-10 bg-black opacity-0 pointer-events-none"></div>
 
         <!-- background image sesuai tema (Fix Penulisan Path Tailwind) -->
-        <div class="fixed inset-0 -z-20 bg-cover bg-center bg-[url(./images/Hero/VENTURA_EMPIRE.png)]"></div>
+        <div class="fixed inset-0 -z-20 bg-cover bg-center bg-[url(./images/Hero/bg-hero.png)]"></div>
         
         <!-- Section 1 - Hero -->
         <section id="hero" class="w-full flex flex-col pt-[166px] md:pt-[270.5px] justify-center items-center gap-4">
@@ -102,74 +102,100 @@
         lg:bg-[url('images/hero/paper-hero-desktop.svg')] bg-center bg-no-repeat pb-1.5">
             <p class="px-[#7A3D21] text-[1.7rem] md:text-[2rem] font-bold">pambayun ardhanareswari artantyadi
             </p><div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90">
-<a href="#aboutme" class="px-[51px] py-[4px] md:px-[119.5px] md:py-[8px] bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)] rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px] drop-shadow-[0_8px_0_#592918]">
-    <p class="uppercase text-white text-[1.3rem] md:text-[1.75rem] md:leading-none">EXPLORE MORE</p>
-</a>
-</div>
-
-        </div>
-        <div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90">
-            <a href="#aboutme" class="px-[51px] py-[4px] md:py-[8px] border border-[#E3B641] ouline outline-1 drop-shadow-[0_8px_0_#592918]">
-            </p></a>
-            </p>
+        <a href="#aboutme" class="px-[51px] py-[4px] md:px-[119.5px] md:py-[8px] bg-[linear-gradient(to_bottom,#F36F41_0%,#F39241_50%,#F36F41_50%,#F39241_100%)] rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px] drop-shadow-[0_8px_0_#592918]">
+            <p class="uppercase text-white text-[1.3rem] md:text-[1.75rem] md:leading-none">EXPLORE MORE</p>
         </a>
         </div>
-        <!-- Section 2 - About me -->
-        <section id="aboutme" class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-24 px-6 md:px-16 lg:px-[90px] mt-100 lg:mt-60">
-            <div class="order-1 lg:order-2 shrink-0">
-        <div class="relative w-[240px] md:w-[280px] lg:w-[340px] aspect-[700/1040]">
-    <img src="images/about/card.png" alt="Kartu profil" class="absolute inset-0 w-full h-full z-10 pointer-events-none" />
-    </div>
-</div>
-            <h2 class="font-zelda text-center text-[80px]">About Me</h2>
-            <p class="px-[100px] text-center text-[32px]">Halo semua aku ayun, aku dari SMKN1 dari jurusan rpl, aku suka memasak.</p>
+
+        <div class="flex w-full justify-center items-center transition-all duration-100 hover:brightness-90"></div>
         </section>
 
+
+        <!-- Section 2 - About me -->
+        <section id="aboutme" class="flex flex-col lg:flex-row items-center justify-center py-16 gap-8 lg:gap-24 px-6 md:px-16 lg:px-[90px] mt-100 lg:mt-60">
+            <!-- Kartu Gambar Profil -->
+            <div class="order-1 lg:order-2 shrink-0">
+                <div class="relative w-[240px] md:w-[280px] lg:w-[340px] aspect-[700/1040]">
+                    <img src="./images/about/AYUN.png" alt="Kartu profil" class="absolute inset-0 w-full h-full z-10 pointer-events-none">
+                </div>
+            </div>
+            <div class="order-2 lg:order-1 flex flex-col text-center gap-4 max-w-xl">
+                <h2 class="uppercase text-[4rem] md:text-[5rem] text-white [-webkit-text-stroke:1px_#7A3D21] text-shadow-[0_5px_0_#7A3D21]">
+                    ABOUT <span class="hidden lg:inline">ME</span>
+                </h2>
+                <p class="font-times text-[#F9DCB4] text-[1rem] md:text-[1.25rem] lg:text-[1.5rem] leading-snug text-justify">
+                    Halo semua aku Ayun, aku dari ITS jurusan Sistem Informasi, aku suka ngoding dan belajar.
+                </p>
+            </div>
+        </section>
+
+
         <!-- Section 3 - My Skills -->
-        <section id="myskills" class="text-left mx-auto p-[60px] w-full">
-            <h2 class="font-zelda text-center text-[80px]">My Skills</h2>
-            <div>
-                <h3 class="font-zelda text-[48px] text-center">Aku tertarik dengan mata pelajaran seni dan pjok</h3>
-                <ul class="text-[32px] list-inside list-disc text-center">
-                    <li>pjok</li>
-                    <li>seni</li>
-                    <li>pipas</li>
-                </ul>
+        <section id="myskills" class="flex justify-center mt-100 px-4">
+            <div class="relative">
+                <!-- Papan Kayu Desktop & Mobile -->
+                <img src="./images/My Skills/wood plank.svg" alt="Papan kayu" class="hidden md:block lg:w-[769.08px] md:w-[500.17px]">
+                <img src="./images/My Skills/wood plank - mobile.svg" alt="Papan kayu" class="block md:hidden w-[25rem]">
+
+                <!-- Paper Scroll -->
+                <div class="absolute inset-0 flex flex-col text-left px-8 md:px-15 pt-8 md:pt-10 gap-1 text-[#592918]">
+                    <h3 class="font-zelda text-[1.8rem] md:text-[2.5rem] lg:text-[3.75rem] leading-tight">
+                        Aku tertarik dengan mata kuliah yang ada di sisfor
+                    </h3>
+                    <ul class="font-times list-disc list-inside ml-4 md:ml-8 text-[1rem] md:text-[1.5rem] lg:text-[2rem] mt-2">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+
+                    <!-- Tombol "My Experience" di Bawah Papan -->
+                    <div class="flex w-full justify-center items-center mt-4 transition-all duration-100 hover:brightness-90">
+                        <a href="#experience" class="px-[30px] py-[4px] md:px-[60px] md:py-[6px] bg-[linear-gradient(to_bottom,#4AA294_0%,#5AB3AD_50%,#4AA294_50%,#4AA294_100%)] rounded-[8px] border-[#F3B641] border-[1px] outline-[#592918] outline-[1px] drop-shadow-[0_5px_0_#592918]">
+                            <p class="uppercase text-white text-[1rem] md:text-[1.25rem]">MY EXPERIENCE</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Section 4 -  My Experience -->
-        <section id="Experience" class="py-[100px]">
-            <div>
-                <h2 class="font-zelda text-[112px] text-white text-shadow-[0_5px_0_#7A3D21] text-center">My Experience</h2>
-                <img src="/images/fotoku/foto1.png" alt="Deskripsi foto 1">
-                <img src="/images/fotoku/foto2.png" alt="Deskripsi foto 2">
-                <img src="/images/fotoku/foto3.png" alt="Deskripsi foto 3">
-                <img src="/images/fotoku/foto4.png" alt="Deskripsi foto 4">
+        <section id="experience" class="mt-100 mb-50">
+            <div class="flex flex-col gap-[1rem] items-center">
+                <h1 class="text-[3.5rem] md:text-[4.5rem] lg:text-[6rem] text-white [-webkit-text-stroke:1px_#7A3D21] lg:[-webkit-text-stroke:2px_#7A3D21] text-shadow-[0_5px_0_#7A3D21] text-center">MY EXPERIENCE</h1>
+                <div class="flex flex-col md:flex-row gap-[1rem]">
+                    <img class="w-[22.5rem] lg:w-[30rem]" src="images/fotoku/fotoku1.png" alt="Deskripsi foto 1">
+                    <img class="w-[22.5rem] lg:w-[30rem]" src="images/fotoku/fotoku2.png" alt="Deskripsi foto 2">	
+                </div>
+                <div class="flex flex-col md:flex-row gap-[1rem]">
+                    <img class="w-[22.5rem] lg:w-[30rem]" src="images/fotoku/fotoku3.png" alt="Deskripsi foto 3">
+                    <img class="w-[22.5rem] lg:w-[30rem]" src="images/fotoku/fotoku4.png" alt="Deskripsi foto 4">
+                </div>
             </div>
         </section>
-        
+
         <!-- Penambahan ekstensi .js -->
         <script src="./bgScrollEffect.js"></script>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full sm:h-[500px] md:h-[350px] lg:h-[600px] 
+    <footer class=": sm:h-[500px] md:h-[350px] lg:h-[600px] 
         bg-[url(./images/footer/bg-footer.png)] bg-cover bg-center px-4 py-8 lg:px-[90px] 
         lg:py-[88px] lg:border-t-[20px] lg:border-t-[#7A3D21] flex justify-center items-center">
 
         <!-- FRAME Parent -->
-        <div class="flex flex-col sm:w-full h-[440px] md:w-170 lg:w-full md:h-full 
+        <div class=" lg:bg-[url('images/footer/frame-footer-desktop.png')], lg:w-[1000px], lg:h-full, dan lg:py-10
+            flex flex-col sm:w-full h-[440px] md:w-170 lg:w-full md:h-full 
             bg-[url(./images/footer/frame-footer-mobile.png)]
             md:bg-[url(./images/footer/frame-footer-desktop.png)] 
-            bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] items-center justify-center">
+            bg-center bg-contain bg-no-repeat px-6 py-10 lg:px-[20px] items-center justify-center"
+            >
             
             <!-- NAVBAR -->
             <div class="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-6">
-                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#hero">HOME</a>
-                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#aboutme">ABOUT ME</a>
-                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#myskills">MY SKILLS</a>
-                <a class="text-[#C07E4E] hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#Experience">MY EXPERIENCE</a>
+                <a class="text-[#C07E4E] hover:underline hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#hero">HOME</a>
+                <a class="text-[#C07E4E] hover:underline hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#aboutme">ABOUT ME</a>
+                <a class="text-[#C07E4E] hover:underline hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#myskills">MY SKILLS</a>
+                <a class="text-[#C07E4E] hover:underline hover:text-[#F9DCB4] text-[1.5rem] lg:text-[32px]" href="#Experience">MY EXPERIENCE</a>
             </div>
 
             <!-- Copyright -->
